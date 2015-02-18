@@ -23,7 +23,7 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
-
+    <script type="text/javascript" src="http://cssherry.tumblr.com/api/read/json"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
@@ -49,6 +49,7 @@
       			<li> <a href="#about" class="smoothScroll"> About</a></li>
       			<li> <a href="#skills" class="smoothScroll"> Skills</a></li>
       			<li> <a href="#portfolio" class="smoothScroll"> Portfolio</a></li>
+      			<li> <a href="#blog" class="smoothScroll"> Blog</a></li>
       			<li> <a href="#contact" class="smoothScroll"> Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -217,6 +218,98 @@
 		</div><!-- /row -->
 	</div><!-- /container -->
 
+  <!-- ==== ABOUT ==== -->
+  <div class="container" id="blog" name="blog">
+    <div class="row text-center">
+      <br>
+      <br>
+      <br>
+      <h1>Blog</h1>
+      <hr>
+      <p>You can access my full blog at <a href="http://blog.cssherry.com/">http://blog.cssherry.com/</a> </p>
+      <br>
+      <br>
+    </div><!-- /row -->
+
+    <!-- latest blog -->
+    <div class="row white">
+      <script type="text/javascript">
+     // The variable "tumblr_api_read" is now set to your tumblr feed.
+       var post = tumblr_api_read['posts'][0]
+       document.write(
+        "<div class='col-md-4'><h2>" + post['regular-title'] + "</h2>" +
+        $($(post['regular-body'])[0]).html() +
+        '<p><a href="' + post.url + '">Read More</a></p></div>'
+       );
+
+       var post = tumblr_api_read['posts'][1]
+       document.write(
+        "<div class='col-md-4'><h2>" + post['regular-title'] + "</h2>" +
+        $($(post['regular-body'])[0]).html() +
+        '<p><a href="' + post.url + '">Read More</a></p></div>'
+       );
+
+       var post = tumblr_api_read['posts'][2]
+       document.write(
+        "<div class='col-md-4'><h2>" + post['regular-title'] + "</h2>" +
+        $($(post['regular-body'])[0]).html() +
+        '<p><a href="' + post.url + '">Read More</a></p></div>'
+       );
+
+       var post = tumblr_api_read['posts'][3]
+       document.write(
+        "<div class='col-md-4'><h2>" + post['regular-title'] + "</h2>" +
+        $($(post['regular-body'])[0]).html() +
+        '<p><a href="' + post.url + '">Read More</a></p></div>'
+       );
+
+       var post = tumblr_api_read['posts'][4]
+       document.write(
+        "<div class='col-md-4'><h2>" + post['regular-title'] + "</h2>" +
+        $($(post['regular-body'])[0]).html() +
+        '<p><a href="' + post.url + '">Read More</a></p></div>'
+       );
+
+       var post = tumblr_api_read['posts'][5]
+       document.write(
+        "<div class='col-md-4'><h2>" + post['regular-title'] + "</h2>" +
+        $($(post['regular-body'])[0]).html() +
+        '<p><a href="' + post.url + '">Read More</a></p></div>'
+       );
+
+       var post = tumblr_api_read['posts'][6]
+       document.write(
+        "<div class='col-md-4'><h2>" + post['regular-title'] + "</h2>" +
+        $($(post['regular-body'])[0]).html() +
+        '<p><a href="' + post.url + '">Read More</a></p></div>'
+       );
+
+       var post = tumblr_api_read['posts'][7]
+       document.write(
+        "<div class='col-md-4'><h2>" + post['regular-title'] + "</h2>" +
+        $($(post['regular-body'])[0]).html() +
+        '<p><a href="' + post.url + '">Read More</a></p></div>'
+       );
+
+       var post = tumblr_api_read['posts'][8]
+       document.write(
+        "<div class='col-md-4'><h2>" + post['regular-title'] + "</h2>" +
+        $($(post['regular-body'])[0]).html() +
+        '<p><a href="' + post.url + '">Read More</a></p></div>'
+       );
+
+       var post = tumblr_api_read['posts'][9]
+       document.write(
+        "<div class='col-md-4'><h2>" + post['regular-title'] + "</h2>" +
+        $($(post['regular-body'])[0]).html() +
+        '<p><a href="' + post.url + '">Read More</a></p></div>'
+       );
+
+
+       </script>
+    </div><!-- row -->
+
+  </div><!-- container -->
 
   <!-- ==== CONTACT ==== -->
   <div class="container" id="contact" name="contact">
