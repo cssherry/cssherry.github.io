@@ -279,7 +279,7 @@
      // The variable "tumblr_api_read" is now set to your tumblr feed.
        var post = tumblr_api_read['posts'][0]
        document.write(
-        "<div class='col-md-4 col-sm-3'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
