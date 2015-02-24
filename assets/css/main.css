@@ -88,6 +88,11 @@ iframe {
     vertical-align: middle;
 }
 
+img.screenshot {
+  height: 50px;
+  width: auto;
+}
+
 /*
  * Allow only vertical resizing of textareas.
  */
