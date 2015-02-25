@@ -555,6 +555,7 @@ a:after {
 /* Caption Style */
 .mask figure {
 	overflow: hidden;
+  height: 200px;
 }
 
 .mask figure img {
