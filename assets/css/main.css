@@ -26,7 +26,7 @@ body {
     line-height: 1.4;
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover {
   background-color: #eeeeee !important;
   color: black !important;
 }
@@ -149,8 +149,7 @@ border-color: transparent;
 border: 0px solid transparent;
 }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover {
 	background-color: #16a085;
 	color: white;
 }
