@@ -300,7 +300,7 @@ a:after {
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 650px;
+  height: auto;
 	width: 100%;
 
     -webkit-background-size: 100%;
@@ -319,20 +319,58 @@ a:after {
 	margin-top: 90px;
 	padding-bottom: 30px;
 	letter-spacing: 8px;
-	font-size: 100px;
 	font-weight: bold;
 	text-shadow: 2px 2px 2px #000;
 }
 
 .headerwrap p {
 	color:#ffffff;
-	font-size: 40px;
 	font-weight: 400;
 	text-align: center;
-	line-height: 40px;
 	letter-spacing: 3px;
 	margin-left: 15px;
 	text-shadow: 1px 1px 1px #000;
+}
+
+@media screen and (min-width: 1001px) {
+  .headerwrap h1, h1 {
+    font-size: 100px;
+  }
+
+  .headerwrap p {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 601px) {
+  .headerwrap h1, h1 {
+  	font-size: 50px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .headerwrap p {
+  	font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headerwrap h1, h1 {
+  	font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .headerwrap p {
+  	font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 #greywrap {
@@ -646,14 +684,4 @@ a:after {
 /*ipad portrait*/
 @media only screen and (min-device-width:768px) and (max-device-width : 1024px) and (orientation : portrait){
 	.header{background-attachment: scroll;}
-}
-
-@media screen and (max-width:769px) {
-	.headerwrap h1 {
-		font-size: 80px;
-	}
-	.headerwrap p {
-		font-size: 30px;
-		line-height: 38px;
-	}
 }
