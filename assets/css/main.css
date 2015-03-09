@@ -331,7 +331,8 @@ a:after {
 	text-shadow: 1px 1px 1px #000;
 }
 
-@media screen and (min-width: 1001px) {
+/* Portrait tablets, medium desktops, and large desktops */
+@media screen and (min-width: 992px) {
   .headerwrap h1, h1 {
     font-size: 100px;
   }
@@ -346,7 +347,8 @@ a:after {
   }
 }
 
-@media screen and (max-width: 1000px) and (min-width: 601px) {
+/* Portrait tablets and small desktops */
+@media screen and (max-width: 992px) and (min-width: 768px) {
   .headerwrap h1, h1 {
   	font-size: 50px;
   }
@@ -365,7 +367,8 @@ a:after {
   }
 }
 
-@media screen and (max-width: 600px) {
+/* Landscape phones, portrait tablets, and smaller */
+@media screen and (max-width: 767px) {
   .headerwrap h1, h1 {
   	font-size: 25px;
   }

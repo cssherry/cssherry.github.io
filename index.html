@@ -379,80 +379,78 @@
     </div><!-- /row -->
 
     <!-- latest blog -->
-    <div class="row white">
+    <div class="row white tabled">
       <script type="text/javascript">
      // The variable "tumblr_api_read" is now set to your tumblr feed.
        var post = tumblr_api_read['posts'][0]
        document.write(
-        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6 post'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
 
        var post = tumblr_api_read['posts'][1]
        document.write(
-        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6 post'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
 
        var post = tumblr_api_read['posts'][2]
        document.write(
-        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6 post'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
 
        var post = tumblr_api_read['posts'][3]
        document.write(
-        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6 post'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
 
        var post = tumblr_api_read['posts'][4]
        document.write(
-        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6 post'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
 
        var post = tumblr_api_read['posts'][5]
        document.write(
-        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6 post'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
 
        var post = tumblr_api_read['posts'][6]
        document.write(
-        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6 post'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
 
        var post = tumblr_api_read['posts'][7]
        document.write(
-        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6 post'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
 
        var post = tumblr_api_read['posts'][8]
        document.write(
-        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6 post'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
 
        var post = tumblr_api_read['posts'][9]
        document.write(
-        "<div class='col-md-4 col-sm-6'><h2>" + post['regular-title'] + "</h2>" +
+        "<div class='col-md-4 col-sm-6 post'><h2>" + post['regular-title'] + "</h2>" +
         $($(post['regular-body'])[0]).html() +
         '<p><a href="' + post.url + '">Read More</a></p></div>'
        );
-
-
        </script>
     </div><!-- row -->
 
@@ -518,6 +516,37 @@
 
   ga('create', 'UA-59835894-1', 'auto');
   ga('send', 'pageview');
+
+  // Make height of blog posts all the same
+  (function(){
+    var addEvent = function(elem, type, eventHandle) {
+      if (elem == null || typeof(elem) == 'undefined') return;
+      if ( elem.addEventListener ) {
+          elem.addEventListener( type, eventHandle, false );
+      } else if ( elem.attachEvent ) {
+          elem.attachEvent( "on" + type, eventHandle );
+      } else {
+          elem["on"+type]=eventHandle;
+      }
+    };
+
+    var resizer = function () {
+      if ($(window).width() > 767) {
+        $('.post').height('auto');
+        var maxheight = 0;
+
+        $('.post').each(function () {
+            maxheight = ($(this).height() > maxheight ? $(this).height() : maxheight);
+        });
+
+        $('.post').height(maxheight);
+      }
+    }
+
+    resizer();
+
+    addEvent(window, 'resize', resizer);
+  })();
 
   </script>
   </body>
