@@ -439,6 +439,10 @@ a:after {
 	padding-top: 25px;
 }
 
+.intro {
+  padding: 10px;
+}
+
 /* Section Dividers */
 .section-divider {
     z-index: 999;
