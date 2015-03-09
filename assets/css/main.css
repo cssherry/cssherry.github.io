@@ -340,6 +340,11 @@ a:after {
     font-size: 40px;
     line-height: 40px;
   }
+
+  .skills {
+    height: 100px;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 1000px) and (min-width: 601px) {
@@ -355,6 +360,11 @@ a:after {
   	font-size: 20px;
     line-height: 20px;
   }
+
+  .skills {
+    height: 80px;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -369,6 +379,11 @@ a:after {
   .headerwrap p {
   	font-size: 14px;
     line-height: 14px;
+  }
+
+  .skills {
+    height: 40px;
+    width: auto;
   }
 }
 
